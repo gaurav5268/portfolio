@@ -4,67 +4,69 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <section id="home" className="home-section">
+
+      {/* Parent container → Image Left + Text Right */}
       <motion.div
-        className="home-content"
+        className="home-wrapper"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "7rem",
+          flexWrap: "wrap",
+        }}
       >
+
+        {/* ================= IMAGE LEFT ================= */}
         <motion.div
-  className="profile-image-container"
-  initial={{ scale: 0, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 100 }}
->
-  <div className="profile-image">
-
-    {/* FIXED ONLY THIS LINE */}
-    <img 
-      src="/mecart.jpg" 
-      alt="profile" 
-      className="profile-placeholder"
-      style={{ width: "220px", height: "220px", borderRadius: "50%", objectFit: "cover" }}
-    />
-
-  </div>
-</motion.div>
-
-        <motion.h1
-          className="home-name"
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
+          className="profile-image-container"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 100 }}
         >
-          Gaurav Chauhan
-        </motion.h1>
+          <div className="profile-image">
+            <img
+              src="/mecart.jpg"
+              alt="profile"
+              style={{
+                width: "260px",
+                height: "380px",
+                borderRadius: "50%",       // oval shape
+                objectFit: "cover",
+                boxShadow: "0 0 20px rgba(0,255,200,0.15)"
+              }}
+            />
+          </div>
+        </motion.div>
 
-        <motion.h2
-          className="home-title"
+        {/* ================= TEXT RIGHT ================= */}
+        <motion.div
+          className="home-content-right"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
+          transition={{ delay: 0.4, duration: 0.7 }}
+          style={{ textAlign: "left", maxWidth: "450px" }}
         >
-          Software Engineer
-        </motion.h2>
+          <h1 className="home-name">Gaurav Chauhan</h1>
 
-        <motion.p
-          className="home-tagline"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-        >
-          Building digital experiences with code and creativity
-        </motion.p>
+          <h2 className="home-title">Software Engineer</h2>
 
-        <motion.div
-          className="home-cta"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
-          <a href="#about" className="cta-btn primary">Learn More</a>
-          <a href="/contact" className="cta-btn secondary">Get In Touch</a>
+          <p className="home-tagline">
+            Building digital experiences with code and creativity.
+          </p>
+
+          <div
+            className="home-cta"
+            style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}
+          >
+            <a href="#about" className="cta-btn primary">Learn More</a>
+            <a href="/contact" className="cta-btn secondary">Get In Touch</a>
+          </div>
         </motion.div>
+
       </motion.div>
     </section>
   );

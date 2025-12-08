@@ -762,3 +762,47 @@ textarea {
   resize: vertical;
   font-family: inherit;
 }
+
+.education-section {
+  margin-bottom: 2.5rem;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.8rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 1rem;
+}
+
+.education-degree {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-color, #00aaff);
+  margin-bottom: 1rem;
+}
+
+.education-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-icon {
+  font-size: 1.8rem;
+  color: var(--accent-color, #00aaff);
+}
+
+.education-university {
+  color: var(--text-light, #ddd);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.education-meta,
+.education-duration {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
