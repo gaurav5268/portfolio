@@ -6,11 +6,9 @@ export default function Navbar() {
   const location = useLocation();
 
   const scrollTo = (id) => {
-    // If you are already on home page
     if (location.pathname === "/") {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     } else {
-      // If you're on another route → go to home first
       window.location.href = `/#${id}`;
     }
   };
@@ -24,14 +22,26 @@ export default function Navbar() {
         <li onClick={() => scrollTo("home")}>Home</li>
         <li onClick={() => scrollTo("about")}>About</li>
         <li onClick={() => scrollTo("skills")}>Skills</li>
-        <li onClick={() => scrollTo("artworks")}>Gallery</li>
 
-        {/* Route items */}
+        {/* ⭐ NEW: Gallery opens its own page */}
         <li>
-          <NavLink to="/resume" className="nav-link">Resume</NavLink>
+          <NavLink to="/gallery" className="nav-link">
+            Gallery
+          </NavLink>
         </li>
+
+        {/* Resume page */}
         <li>
-          <NavLink to="/contact" className="nav-link">Contact</NavLink>
+          <NavLink to="/resume" className="nav-link">
+            Resume
+          </NavLink>
+        </li>
+
+        {/* Contact page */}
+        <li>
+          <NavLink to="/contact" className="nav-link">
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
