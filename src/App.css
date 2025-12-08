@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url(C:\Users\Gravity\Desktop\port\public\COM_BACK.jpg);
+  color: white;
+  animation: spaceMove 40s linear infinite;
+  background-attachment: fixed;
+}
+
+@keyframes spaceMove {
+  from { background-position-y: 0; }
+  to { background-position-y: 2000px; }
+}
+
+
+.section-panel {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 1100px;
+  
+  border: 2px solid rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25),
+              0 0 50px rgba(0, 255, 255, 0.1);
+              
+  transition: 0.4s ease-in-out;
+}
+
+.section-panel:hover {
+  border-color: rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.7),
+              0 0 80px rgba(0, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+
+button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 0;
+  padding: 8px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes floatGlow {
+  0%   { transform: translateY(0px);   box-shadow: 0 0 20px #0ff; }
+  50%  { transform: translateY(-10px); box-shadow: 0 0 35px #0ff; }
+  100% { transform: translateY(0px);   box-shadow: 0 0 20px #0ff; }
+}
+
+.floating {
+  animation: floatGlow 4s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+  .section-panel {
+    width: 95%;
+    padding: 40px 15px;
+    margin: 40px auto;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+input, textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #00eaff;
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
