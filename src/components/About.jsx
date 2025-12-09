@@ -119,27 +119,7 @@ export default function About() {
         </p>
       </motion.div>
 
-      {/* ================= Highlights ================= */}
-      <motion.div
-        className="about-highlights"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-      >
-        <div className="highlight-item">
-          <span className="highlight-number">22</span>
-          <span className="highlight-label">Age</span>
-        </div>
-        <div className="highlight-item">
-          <span className="highlight-number">10+</span>
-          <span className="highlight-label">Projects Completed</span>
-        </div>
-        <div className="highlight-item">
-          <span className="highlight-number">5+</span>
-          <span className="highlight-label">Technologies</span>
-        </div>
-      </motion.div>
+      
     </section>
   );
 }

@@ -10,6 +10,11 @@ import instagramLogo from "/insta.png";
 
 import "../styles/Contacts.css"
 import '../index.css' 
+console.log(
+  "SERVICE ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  "TEMPLATE ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  "PUBLIC KEY:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+);
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -80,7 +85,7 @@ export default function Contact() {
         transition={{ duration: 0.7 }}
         className="contact-title"
       >
-        Create Connection
+        Let's Connect!
       </motion.h1>
 
       <motion.p
@@ -89,7 +94,7 @@ export default function Contact() {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="contact-subtitle"
       >
-        Whether it’s a new project, a collaboration, or just to say hi — I’d love to hear from you!
+        I would love to hear from you, feel free to reach out to me.
       </motion.p>
 
       {/* Quick Links */}
