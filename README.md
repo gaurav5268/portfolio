@@ -2,7 +2,8 @@
 A modern, fully responsive portfolio website built using **React + Vite**, showcasing my work, skills, experience, and contact system with EmailJS integration.
 
  **Live Website:** https://gauravchauhan.vercel.app  
- **Repository:** https://github.com/gaurav5268/port  
+ **Repository:** https://github.com/gaurav5268/portfolio
+ 
 
 ---
 
