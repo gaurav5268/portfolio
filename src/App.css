@@ -690,7 +690,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: url(C:\Users\Gravity\Desktop\port\public\COM_BACK.jpg);
+  background: url('/COM_BACK.jpg');
   color: white;
   animation: spaceMove 40s linear infinite;
   background-attachment: fixed;
