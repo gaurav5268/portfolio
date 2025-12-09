@@ -1,16 +1,117 @@
-# React + Vite
+#  Gaurav Chauhan — Portfolio Website  
+A modern, fully responsive portfolio website built using **React + Vite**, showcasing my work, skills, experience, and contact system with EmailJS integration.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ **Live Website:** https://gauravchauhan.vercel.app  
+ **Repository:** https://github.com/gaurav5268/port  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## React Compiler
+###  Modern UI/UX  
+- Glassmorphism + smooth animations  
+- Clean, minimal and developer-friendly design  
+- Fully responsive across all devices  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Built with React + Vite  
+- Lightning-fast development environment  
+- Component-based clean architecture  
 
-## Expanding the ESLint configuration
+### Smooth Animations  
+- Powered by **Framer Motion**  
+- Page transitions + smooth fade & slide effects  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###Dynamic Navbar  
+- Desktop & mobile–friendly  
+- Hamburger menu on mobile  
+- React Router pages: Home, About, Skills, Gallery, Resume, Contact  
+
+### Resume Section  
+- In-website quick overview  
+- Embedded PDF viewer  
+- Resume download button  
+
+### Contact Form (EmailJS)  
+- Direct message delivery to my email  
+- Form validation  
+- User-friendly notifications  
+
+###  Gallery Page  
+- Responsive photo grid  
+- Clean preview system  
+
+---
+
+## Tech Stack
+
+| Category | Technologies |
+|---------|--------------|
+| Frontend | React, Vite, JavaScript |
+| Styling | CSS3, Framer Motion, Glass UI |
+| Routing | React Router DOM |
+| Utilities | EmailJS, Vercel Hosting |
+| Version Control | Git & GitHub |
+
+---
+
+## Folder Structure (Important Files)
+
+/src
+├── components/
+│ ├── Navbar.jsx
+│ ├── Home.jsx
+│ ├── About.jsx
+│ ├── Skills.jsx
+│ ├── Gallery.jsx
+│ ├── Resume.jsx
+│ └── Contact.jsx
+├── styles/
+│ ├── Navbar.css
+│ ├── Contacts.css
+│ └── Other component-specific CSS
+├── App.jsx
+├── main.jsx
+/public
+├── COM_BACK.jpg (background image)
+├── resume.pdf
+└── icons (github, linkedin, etc.)
+
+
+---
+
+## Environment Variables (Required for Contact Form)
+
+Create a `.env` file in the root:
+
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+
+
+`.env` is added to `.gitignore` to keep credentials secure.
+
+---
+
+## Deployment (Vercel)
+
+A `vercel.json` file is used to fix React Router 404 issue:
+
+```json
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+```
+Contact Me
+
+Portfolio: https://gauravchauhan.vercel.app
+
+GitHub: https://github.com/gaurav5268
+
+LinkedIn: https://www.linkedin.com/in/gaurav-chauhan-277085228/
+
+Email: gauravchau0@gmail.com
+
+
+🙌 Thank You for Visiting My Portfolio!
